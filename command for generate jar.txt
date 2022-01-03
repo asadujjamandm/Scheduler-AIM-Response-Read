@@ -1,0 +1,5 @@
+javac -cp ".;./org.springframework.core-3.0.4.RELEASE.jar" src/SchedulerTask/*.java -d bin
+
+jar cvfm scheduler_task.jar .\resources\manifest.txt -C bin . src .\config.txt .\org.springframework.core-3.0.4.RELEASE.jar
+
+java -jar scheduler_task.jar
